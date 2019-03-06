@@ -9,7 +9,10 @@ The web app is built on facebook incubator's [create-react-app](https://github.c
 This project is expected to work on macOS/Linux/Windows on node's LTS release (6.X.Y) and latest npm.
 
     npm i -g npm # update npm
-    npm i # install everything
+    npm i # install server
+    cd client
+    npm i $install client
+    cd . #navigate back to server directory
     npm run dev # run dev environment
    
 ## App structure
