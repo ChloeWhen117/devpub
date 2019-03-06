@@ -11,7 +11,7 @@ This project is expected to work on macOS/Linux/Windows on node's LTS release (6
     npm i -g npm # update npm
     npm i # install server
     cd client
-    npm i $install client
+    npm i # install client
     cd . #navigate back to server directory
     npm run dev # run dev environment
    
