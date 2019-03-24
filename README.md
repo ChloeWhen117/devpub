@@ -21,5 +21,5 @@ Server lives in the main directory. Client lives in '/client'. Server and client
 
 ## Authentication
 
-[Passport](http://www.passportjs.org/) Strategy for JWT Authentication
+[Passport](http://www.passportjs.org/packages/passport-jwt/) Strategy for JWT Authentication
 
