@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types';
 
 class Login extends Component {
     constructor() {
@@ -16,11 +17,11 @@ class Login extends Component {
     onSubmit(e) {
       e.preventDefault();
   
-      const User = {
+      const userData = {
         email: this.state.email,
         password: this.state.password,
       };
-      console.log(User);
+      this.props.loginUser(userData);
     }
   
     onChange(e) {
