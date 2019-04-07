@@ -110,8 +110,6 @@ router.post('/',  passport.authenticate('jwt', { session: false }), (req, res) =
     if (req.body.location) profileFields.location = req.body.location;
     if (req.body.bio) profileFields.bio = req.body.bio;
     if (req.body.status) profileFields.status = req.body.status;
-    if (req.body.githubusername)
-      profileFields.githubusername = req.body.githubusername;
     // Skills - Spilt into array
     if (typeof req.body.skills !== 'undefined') {
       profileFields.skills = req.body.skills.split(',');
@@ -119,6 +117,7 @@ router.post('/',  passport.authenticate('jwt', { session: false }), (req, res) =
 
     // Social
     profileFields.social = {};
+    if (req.body.github) profileFields.social.github = req.body.github;
     if (req.body.youtube) profileFields.social.youtube = req.body.youtube;
     if (req.body.twitter) profileFields.social.twitter = req.body.twitter;
     if (req.body.facebook) profileFields.social.facebook = req.body.facebook;
