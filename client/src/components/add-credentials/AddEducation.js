@@ -12,7 +12,7 @@ class AddEducation extends Component {
     this.state = {
       school: '',
       degree: '',
-      fieldofstudy: '',
+      field_of_study: '',
       from: '',
       to: '',
       current: false,
@@ -38,7 +38,7 @@ class AddEducation extends Component {
     const eduData = {
       school: this.state.school,
       degree: this.state.degree,
-      fieldofstudy: this.state.fieldofstudy,
+      field_of_study: this.state.field_of_study,
       from: this.state.from,
       to: this.state.to,
       current: this.state.current,
@@ -92,10 +92,10 @@ class AddEducation extends Component {
                 />
                 <TextFieldGroup
                   placeholder="* Field of Study"
-                  name="fieldofstudy"
-                  value={this.state.fieldofstudy}
+                  name="field_of_study"
+                  value={this.state.field_of_study}
                   onChange={this.onChange}
-                  error={errors.fieldofstudy}
+                  error={errors.field_of_study}
                 />
                 <h6>From Date</h6>
                 <TextFieldGroup
@@ -134,7 +134,7 @@ class AddEducation extends Component {
                   value={this.state.description}
                   onChange={this.onChange}
                   error={errors.description}
-                  info="Tell us about the program that you were in"
+                  info="Describe the program you were in"
                 />
                 <input
                   type="submit"
