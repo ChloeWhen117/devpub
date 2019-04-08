@@ -79,7 +79,7 @@ class CreateProfile extends Component {
             icon="fab fa-github"
             value={this.state.github}
             onChange={this.onChange}
-            error={errors.twitter}
+            error={errors.github}
           />
 
           <InputGroup
