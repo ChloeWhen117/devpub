@@ -14,12 +14,13 @@ class NavBar extends Component {
 
   render() {
     const { isAuthenticated, user } = this.props.auth;
+    const someValidPath = "";
 
     const authLinks = (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <a 
-            href=""
+            href={someValidPath}
             onClick={this.onLogoutClick.bind(this)} 
             className="nav-link">
             <img 
