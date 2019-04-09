@@ -18,7 +18,7 @@ router.get('/test', (req, res) => res.json({msg: "Posts Works"})
 );
 
 // @route   GET api/posts
-// @desc    Create post
+// @desc    Get posts
 // @access  Public
 router.get('/', (req, res) => {
   Post.find()
@@ -33,7 +33,7 @@ router.get('/', (req, res) => {
 router.get('/:id', (req, res) => {
   Post.findById(req.params.id)
     .then(post => res.json(post))
-    .catch(err => res.status(404).json({ no_posts_found: 'No posts found with that id' }));
+    .catch(err => res.status(404).json({ no_post_found: 'No posts found with that id' }));
 });
 
 // @route   POST api/posts
@@ -44,7 +44,7 @@ router.post('/', passport.authenticate('jwt', { session: false}), (req, res) => 
 
   // Check Validation
   if (!isValid) {
-    // If any errors send 400 with errors obkect
+    // If any errors send 400 with errors object
     return res.status(400).json(errors);
   }
   
