@@ -76,7 +76,7 @@ class PostItem extends Component {
                     type="button"
                     className="btn btn-danger mr-1"
                   >
-                    <i className="fas fa-times" />
+                    <i className="fa fa-trash" />
                   </button>
                 ) : null}
               </span>
