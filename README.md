@@ -12,7 +12,7 @@ This project is expected to work on macOS/Linux/Windows on node's LTS release (6
     npm i        # install server
     cd client    #navigate to client directory
     npm i        # install client
-    cd -         #navigate back to main/server directory
+    cd ..         #navigate back to main/server directory
     npm run dev  # run dev environment
 
 [Redux Developer Tools](https://github.com/zalmoxisus/redux-devtools-extension) for your preferred browser is required to build the project. 
