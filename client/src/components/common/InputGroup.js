@@ -9,13 +9,14 @@ const InputGroup = ({
   error,
   type,
   icon,
-  onChange,
+  iconlabel,
+  onChange
 }) => {
   return (
     <div>
       <div className="input-group-prepend">
         <span className="input-group-text">
-          <i className ={icon} />
+          <i className ={icon} /> {iconlabel}
         </span>
       </div>
       <textarea
@@ -35,9 +36,10 @@ const InputGroup = ({
 
 InputGroup.propTypes = {
   name: PropTypes.string.isRequired,
-  passholder: PropTypes.string,
+  placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  iconlabel: PropTypes.string.isRequired,
   error: PropTypes.string,
   type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired

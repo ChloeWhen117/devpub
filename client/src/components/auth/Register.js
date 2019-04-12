@@ -62,13 +62,16 @@ class Register extends Component {
                 Create your DevPub account
               </p>
               <form noValidate onSubmit={this.onSubmit}>
+                <label for="InputName">Name</label>
                 <TextFieldGroup
                   placeholder="Name"
                   name="name"
                   value={this.state.name}
                   onChange={this.onChange}
                   error={errors.name}
+                  info="Example: Elliot Alderson"
                 />
+                <label for="InputEmail">Email address</label>
                 <TextFieldGroup
                   placeholder="Email"
                   name="email"
@@ -76,8 +79,9 @@ class Register extends Component {
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
-                  info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
+                  info="Please use a throwaway email. Also, this site uses Gravatar. If you want a profile image, use a Gravatar email"
                 />
+                <label for="InputPassword">Password</label>
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"
@@ -85,7 +89,9 @@ class Register extends Component {
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
+                  info="Your password will be stored as a hashed value."
                 />
+                <label for="InputPassword2">Confirm Password</label>
                 <TextFieldGroup
                   placeholder="Confirm Password"
                   name="password2"
@@ -93,6 +99,7 @@ class Register extends Component {
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
+                  info="Should match the password you've entered in the previous textbox"
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>

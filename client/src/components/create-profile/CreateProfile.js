@@ -77,42 +77,43 @@ class CreateProfile extends Component {
             placeholder="Github Profile URL"
             name="github"
             icon="fab fa-github"
+            iconlabel="Link to Github profile"
             value={this.state.github}
             onChange={this.onChange}
             error={errors.github}
           />
-
           <InputGroup
             placeholder="Twitter Profile URL"
             name="twitter"
             icon="fab fa-twitter"
+            iconlabel="Link to Twitter profile"
             value={this.state.twitter}
             onChange={this.onChange}
             error={errors.twitter}
           />
-
           <InputGroup
             placeholder="Facebook Page URL"
             name="facebook"
             icon="fab fa-facebook"
+            iconlabel="Link to Facebook profile or page"
             value={this.state.facebook}
             onChange={this.onChange}
             error={errors.facebook}
           />
-
           <InputGroup
             placeholder="Linkedin Profile URL"
             name="linkedin"
             icon="fab fa-linkedin"
+            iconlabel="Link to Linkedin profile"
             value={this.state.linkedin}
             onChange={this.onChange}
             error={errors.linkedin}
           />
-
           <InputGroup
             placeholder="YouTube Channel URL"
             name="youtube"
             icon="fab fa-youtube"
+            iconlabel="Link to Youtube channel"
             value={this.state.youtube}
             onChange={this.onChange}
             error={errors.youtube}
@@ -122,7 +123,7 @@ class CreateProfile extends Component {
     }
 
     const options = [
-      { label: '* Select Professional Status', value: 0 },
+      { label: 'Select Professional Status', value: 0 },
       { label: 'Developer', value: 'Developer' },
       { label: 'Entry Level Developer', value: 'Entry Level Developer' },
       { label: 'Junior Developer', value: 'Junior Developer' },
@@ -145,14 +146,16 @@ class CreateProfile extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
+                <label for="InputUsername">Username*</label>
                 <TextFieldGroup
-                  placeholder=" Profile Handle"
+                  placeholder="Profile Handle"
                   name="handle"
                   value={this.state.handle}
                   onChange={this.onChange}
                   error={errors.handle}
                   info="A unique handle for your profile URL. We suggest using your full name, company name, nickname"
                 />
+                <label for="InputStatus">Career status*</label>
                 <SelectListGroup
                   placeholder="Status"
                   name="status"
@@ -160,8 +163,9 @@ class CreateProfile extends Component {
                   onChange={this.onChange}
                   options={options}
                   error={errors.status}
-                  info="Where you are in your career"
+                  info="Where you are at in your career"
                 />
+                <label for="InputCompany">Company</label>
                 <TextFieldGroup
                   placeholder="Company"
                   name="company"
@@ -170,6 +174,7 @@ class CreateProfile extends Component {
                   error={errors.company}
                   info="Place of employment"
                 />
+                <label for="InputWebsite">Link to personal website</label>
                 <TextFieldGroup
                   placeholder="Website"
                   name="website"
@@ -178,6 +183,7 @@ class CreateProfile extends Component {
                   error={errors.website}
                   info="We suggest linking own website or a company one"
                 />
+                <label for="InputLocation">Location</label>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -186,15 +192,16 @@ class CreateProfile extends Component {
                   error={errors.location}
                   info="City & State or City & Province (eg. Boston, MA)"
                 />
+                <label for="InputSkills">Skills*</label>
                 <TextFieldGroup
-                  placeholder="* Skills"
+                  placeholder=""
                   name="skills"
                   value={this.state.skills}
                   onChange={this.onChange}
                   error={errors.skills}
-                  info="Please use comma separated values (eg. 
-                    HTML, CSS, JavaScript, PHP)"
+                  info="Please use comma separated values (eg. HTML, CSS, JavaScript, PHP)"
                 />
+                <label for="InputBio">Bio</label>
                 <TextAreaFieldGroup
                   placeholder="Short Bio"
                   name="bio"

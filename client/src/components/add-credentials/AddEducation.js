@@ -76,28 +76,31 @@ class AddEducation extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
+              <label for="InputSchool">School*</label>
                 <TextFieldGroup
-                  placeholder="* School"
+                  placeholder="School"
                   name="school"
                   value={this.state.school}
                   onChange={this.onChange}
                   error={errors.school}
                 />
+                <label for="InputDegree">Degree or Certification*</label>
                 <TextFieldGroup
-                  placeholder="* Degree or Certification"
+                  placeholder="Degree or Certification"
                   name="degree"
                   value={this.state.degree}
                   onChange={this.onChange}
                   error={errors.degree}
                 />
+                <label for="InputDegree">Field of Study*</label>
                 <TextFieldGroup
-                  placeholder="* Field of Study"
+                  placeholder="Field of Study"
                   name="field_of_study"
                   value={this.state.field_of_study}
                   onChange={this.onChange}
                   error={errors.field_of_study}
                 />
-                <h6>From Date</h6>
+                <label for="InputFromDate">From Date</label>
                 <TextFieldGroup
                   name="from"
                   type="date"
@@ -105,7 +108,7 @@ class AddEducation extends Component {
                   onChange={this.onChange}
                   error={errors.from}
                 />
-                <h6>To Date</h6>
+                <label for="InputToDate">To Date</label>
                 <TextFieldGroup
                   name="to"
                   type="date"
@@ -128,6 +131,7 @@ class AddEducation extends Component {
                     Currently enrolled
                   </label>
                 </div>
+                <label for="InputProgramDescription">Program Description</label>
                 <TextAreaFieldGroup
                   placeholder="Program Description"
                   name="description"

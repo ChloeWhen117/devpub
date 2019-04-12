@@ -60,6 +60,7 @@ class Login extends Component {
                 Sign in to your DevPub account
               </p>
               <form onSubmit={this.onSubmit}>
+                <label for="InputEmail">Email</label>
                 <TextFieldGroup
                   placeholder="Email Address"
                   name="email"
@@ -67,8 +68,9 @@ class Login extends Component {
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
+                  info="Example: elliotald@gmail.com"
                 />
-                
+                <label for="InputEmail">Password</label>
                 <TextFieldGroup
                   placeholder="Password"
                   name="password"
@@ -76,6 +78,7 @@ class Login extends Component {
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
+                  info="Passwords are case sensitive"
                 />
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>

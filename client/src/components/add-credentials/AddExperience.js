@@ -75,20 +75,23 @@ class AddExperience extends Component {
               </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
+                <label for="InputCompany">Company*</label>
                 <TextFieldGroup
-                  placeholder="* Company"
+                  placeholder="Company"
                   name="company"
                   value={this.state.company}
                   onChange={this.onChange}
                   error={errors.company}
                 />
+                <label for="InputJobTitle">Job Title*</label>
                 <TextFieldGroup
-                  placeholder="* Job Title"
+                  placeholder="Job Title"
                   name="title"
                   value={this.state.title}
                   onChange={this.onChange}
                   error={errors.title}
                 />
+                <label for="InputLocation">Location</label>
                 <TextFieldGroup
                   placeholder="Location"
                   name="location"
@@ -96,7 +99,7 @@ class AddExperience extends Component {
                   onChange={this.onChange}
                   error={errors.location}
                 />
-                <h6>From Date</h6>
+                <label for="InputFromDate">From Date</label>
                 <TextFieldGroup
                   name="from"
                   type="date"
@@ -104,7 +107,7 @@ class AddExperience extends Component {
                   onChange={this.onChange}
                   error={errors.from}
                 />
-                <h6>To Date</h6>
+                <label for="InputToDate">To Date</label>
                 <TextFieldGroup
                   name="to"
                   type="date"
@@ -127,6 +130,7 @@ class AddExperience extends Component {
                     Current Job
                   </label>
                 </div>
+                <label for="InputJobDescription">Job Description</label>
                 <TextAreaFieldGroup
                   placeholder="Job Description"
                   name="description"
