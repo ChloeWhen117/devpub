@@ -11,7 +11,7 @@ This project is expected to work on macOS/Linux/Windows on node's LTS release (6
     npm i -g npm             # update npm
     npm i                    # install server
     npm run client-install   # install client
-    npm run dev  # run dev environment
+    npm run dev              # run dev environment
 
 [Redux Developer Tools](https://github.com/zalmoxisus/redux-devtools-extension) for your preferred browser is required to build the project. 
 
