@@ -13,8 +13,6 @@ This project is expected to work on macOS/Linux/Windows on node's LTS release (6
     npm run client-install   # install client
     npm run dev              # run dev environment
 
-[Redux Developer Tools](https://github.com/zalmoxisus/redux-devtools-extension) for your preferred browser is required to build the project. 
-
 ## App structure
 
 Server lives in the main directory. Client lives in '/client'. Server and client have separate build steps.
@@ -23,3 +21,16 @@ Server lives in the main directory. Client lives in '/client'. Server and client
 
 [Passport](http://www.passportjs.org/packages/passport-jwt/) Strategy for JWT Authentication
 
+## Testing
+
+Tests use create-react-app's default framework [jest](https://facebook.github.io/jest/).
+
+There's not many tests at the moment. Only smoke tests have been implemented. But here's the general plan: 
+
+1. Smoke tests for each component that just render that component.
+2. Unit tests for components that get used heavily.
+3. Integration tests that can run on deploys.
+
+## Dependencies
+
+### [Redux Developer Tools](https://github.com/zalmoxisus/redux-devtools-extension) for your preferred browser is required to build the project. 
