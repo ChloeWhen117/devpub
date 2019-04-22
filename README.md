@@ -34,3 +34,15 @@ There's not many tests at the moment. Only smoke tests have been implemented. Bu
 ## Dependencies
 
 ### [Redux Developer Tools](https://github.com/zalmoxisus/redux-devtools-extension) for your preferred browser is required to build the project. 
+
+### [MLab](https://mlab.com/) Key
+In order for the build to work, you have to create a development build keys file 'keys_dev.js' in '/config' with the follow code:
+
+```
+module.exports = {
+  mongoURI:
+  'mlab key here',
+  secretOrKey: 'secret'
+};
+
+```
