@@ -1,31 +1,14 @@
-html, body {
-  height: 100%;
+body {
+  margin-bottom: 100px !important;
 }
 
 img {
   width: 100%;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-}
-
-.content {
-  flex: 1 0 auto;
-}
-
-.footer {
-  flex-shrink: 0;
-}
-
 .landing {
   position: relative;
-}
-
-.landing {
-  position: relative;
-  background: url('./img/showcase.jpg') no-repeat;
+  background: url("./img/showcase.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -57,4 +40,11 @@ body {
 
 .form-control::placeholder {
   color: #bbb !important;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
